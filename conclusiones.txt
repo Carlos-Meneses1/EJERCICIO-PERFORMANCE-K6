@@ -1,0 +1,57 @@
+# CONCLUSIONES
+
+Prueba de carga al endpoint de autenticación https://fakestoreapi.com/auth/login utilizando la herramienta K6, siguiendo los criterios técnicos definidos en el ejercicio.
+
+El objetivo era evaluar el comportamiento del servicio bajo carga moderada, validando tiempos de respuesta y tasa de errores, alcanzando al menos 20 TPS.
+
+---
+
+## HALLAZGOS PRINCIPALES
+
+- Utilicé un conjunto de 5 credenciales válidas proporcionadas por la API pública, parametrizadas desde un archivo CSV.
+
+- Durante la ejecución de 3 minutos, se realizaron 5,233 peticiones, alcanzando una tasa de 28.99 transacciones por segundo (TPS), superando el objetivo de 20 TPS.
+
+- El tiempo de respuesta promedio fue de 353.18 ms, y el percentil 95 se ubicó en 414.63 ms, cumpliendo ampliamente con el umbral de 1.5 segundos establecido.
+
+- La tasa de error fue de 0%, muy por debajo del límite aceptable de 3%.
+
+- Todas las respuestas del servidor incluyeron un token de autenticación válido, confirmando que el login fue exitoso en cada iteración.
+
+- Se ejecutaron 15,699 validaciones automáticas (checks) con 100% de éxito.
+
+---
+
+## AJUSTES REALIZADOS
+
+Configuración inicial:
+- La primera ejecución con 25 usuarios virtuales y sleep de 1 segundo alcanzó solo 10.5 TPS, insuficiente para el objetivo.
+
+Optimización aplicada:
+- Incrementé a 40 usuarios virtuales concurrentes y reduje el tiempo de espera (sleep) a 0.5 segundos.
+- Resultado: 28.99 TPS, cumpliendo el objetivo establecido.
+
+---
+
+## OBSERVACIÓN TÉCNICA RELEVANTE
+
+Al principio, configuré el script para validar respuestas con código HTTP 200, asumiendo que ese sería el indicador de éxito.
+
+Sin embargo, durante la ejecución observé que el servidor responde con HTTP 201 (Created) cuando el login es exitoso.
+
+Ajusté el script para aceptar este código como válido, lo que permitió que las validaciones reflejaran correctamente el comportamiento real del servicio.
+
+---
+
+## CONCLUSIÓN GENERAL
+
+Con base en los resultados obtenidos, puedo concluir que el servicio de login responde de forma estable, confiable y eficiente ante múltiples solicitudes concurrentes.
+
+La infraestructura manejó una carga de 40 usuarios virtuales simultáneos sin errores y con tiempos de respuesta consistentemente bajos (414.63 ms en p95).
+
+El servicio cumple con todos los criterios de rendimiento establecidos:
+✓ TPS > 20 req/s (alcanzado: 28.99 req/s)
+✓ Tiempo de respuesta p95 < 1500 ms (alcanzado: 414.63 ms)
+✓ Tasa de error < 3% (alcanzado: 0%)
+
+Esto demuestra que el endpoint está bien preparado para escenarios de uso moderado y puede manejar cargas superiores a las inicialmente requeridas.
