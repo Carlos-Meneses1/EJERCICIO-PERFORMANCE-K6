@@ -18,7 +18,11 @@ El objetivo es evaluar el comportamiento del endpoint bajo condiciones de concur
 - Conexión a internet activa
 
 ---
-
+### Clonar o descargar el repositorio
+```bash
+git clone https://github.com/Carlos-Meneses1/EJERCICIO-PERFORMANCE-K6.git
+cd PRUEBA_TECNICA_API_PETSTORE
+```
 ## INSTALACIÓN DE K6 EN WINDOWS 
 
 # INSTALACIÓN DE K6
