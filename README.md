@@ -37,7 +37,7 @@ cd EJERCICIO-PERFORMANCE-K6
 
 ### Opción 1: Windows con Scoop (recomendado)
 
-#### 1. Permitir ejecución de scripts (solo una vez) Ir al directorio del proyecto y ejecutar en una consola:
+#### 1. Permitir ejecución de scripts (solo una vez) Ir al directorio del proyecto y ejecutar en la terminal:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
