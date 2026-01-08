@@ -19,13 +19,13 @@ El objetivo es evaluar el comportamiento del endpoint bajo condiciones de concur
 
 ---
 
-## INSTALACIÓN DE K6 EN WINDOWS (Descargando el proyecto)
+## INSTALACIÓN DE K6 EN WINDOWS 
 
 # INSTALACIÓN DE K6
 
 ### Opción 1: Windows con Scoop (recomendado)
 
-#### 1. Permitir ejecución de scripts (solo una vez)
+#### 1. Permitir ejecución de scripts (solo una vez) Ir al directorio del proyecto y ejecutar:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
