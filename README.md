@@ -25,7 +25,7 @@ El objetivo es evaluar el comportamiento del endpoint bajo condiciones de concur
 
 ### Opción 1: Windows con Scoop (recomendado)
 
-#### 1. Permitir ejecución de scripts (solo una vez) Ir al directorio del proyecto y ejecutar:
+#### 1. Permitir ejecución de scripts (solo una vez) Ir al directorio del proyecto y ejecutar en una consola:
 ```powershell
 Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
