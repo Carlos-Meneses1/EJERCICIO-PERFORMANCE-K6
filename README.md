@@ -25,7 +25,7 @@ El objetivo es evaluar el comportamiento del endpoint bajo condiciones de concur
 **Opción 1:** Descarga manual
 - Hacer clic en `<> Code` → Pestaña `Local` → `Download ZIP`
 
-**Opción 2:** Clonar el repositorio
+**Opción 2:** Clonar el repositorio (CMD,POWERSHELL O TERMINAL VS)
 ```bash
 git clone https://github.com/Carlos-Meneses1/EJERCICIO-PERFORMANCE-K6.git
 cd EJERCICIO-PERFORMANCE-K6
@@ -33,7 +33,7 @@ cd EJERCICIO-PERFORMANCE-K6
 
 ## INSTALACIÓN DE K6 EN WINDOWS 
 
-# INSTALACIÓN DE K6
+# INSTALACIÓN DE K6 (CMD,POWERSHELL O TERMINAL VS)
 
 ### Opción 1: Windows con Scoop (recomendado)
 
@@ -66,22 +66,16 @@ k6 version
 
 ---
 
-## INSTRUCCIONES DE EJECUCIÓN
+## INSTRUCCIONES DE EJECUCIÓN 
 
-1. **Descargar el proyecto:**
-
-**Descarga manual** 
-- Hacer clic en `<> Code` → Pestaña `Local` → `Download ZIP`
-
-
-2. **Ejecutar la prueba:**
+1. **Ejecutar la prueba:**
 En Windows (PowerShell o Terminal de VS Code), navegar a la ruta de la carpeta donde está el proyecto y ejecutar el siguiente comando:
 
 ```powershell
    k6 run scripts\login_test.js
 ```
 
-3. **Generar resumen de resultados:**
+2. **Generar resumen de resultados:**
 ```powershell
    k6 run scripts\login_test.js > textSummary.txt
 ```
