@@ -19,22 +19,42 @@ El objetivo es evaluar el comportamiento del endpoint bajo condiciones de concur
 
 ---
 
-## INSTALACIÓN DE K6 EN WINDOWS
+## INSTALACIÓN DE K6 EN WINDOWS (Descargando el proyecto)
 
-### Opción 1: Usando Chocolatey (recomendado)
-1. Instala Chocolatey si no lo tienes: https://chocolatey.org/install
-2. Luego ejecuta:
+# INSTALACIÓN DE K6
+
+### Opción 1: Windows con Scoop (recomendado)
+
+#### 1. Permitir ejecución de scripts (solo una vez)
 ```powershell
-   choco install k6
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
 ```
 
+Presiona Enter y acepta con `Y`.
+
+#### 2. Instalar Scoop
+```powershell
+irm get.scoop.sh | iex
+```
+
+⏳ Espera unos segundos hasta que termine.
+
+#### 3. Instalar K6
+```powershell
+scoop install k6
+```
+
+#### 4. Verificar instalación
+```powershell
+k6 version
+```
 ### Opción 2: Manual
-1. Descarga el binario desde: https://github.com/grafana/k6/releases
-2. Extrae el archivo a `C:\k6\`
-3. Agrega la carpeta al PATH del sistema:
-```powershell
-   set PATH=%PATH%;C:\k6
-```
+#### 1. Descarga el binario desde: https://github.com/grafana/k6/releases
+#### 2. Extrae el archivo y agrega la carpeta al PATH de tu sistema. 
+
+---
+
+**Nota:** Estos comandos son específicos para sistemas Linux. Si usas Windows localmente, utiliza la Opción 1.
 
 ---
 
