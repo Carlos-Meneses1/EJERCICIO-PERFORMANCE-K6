@@ -53,7 +53,6 @@ k6 version
 #### 2. Extrae el archivo y agrega la carpeta al PATH de tu sistema. 
 
 ---
----
 
 ## INSTRUCCIONES DE EJECUCIÓN
 
