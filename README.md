@@ -53,20 +53,14 @@ k6 version
 #### 2. Extrae el archivo y agrega la carpeta al PATH de tu sistema. 
 
 ---
-
-**Nota:** Estos comandos son específicos para sistemas Linux. Si usas Windows localmente, utiliza la Opción 1.
-
 ---
 
 ## INSTRUCCIONES DE EJECUCIÓN
 
 1. **Descargar el proyecto:**
 
-**Opción 1:** Descarga manual
+**Descarga manual** 
 - Hacer clic en `<> Code` → Pestaña `Local` → `Download ZIP`
-
-**Opción 2:** Ejecutar con Codespaces
-- Hacer clic en `<> Code` → Pestaña `Codespaces`
 
 
 2. **Ejecutar la prueba:**
